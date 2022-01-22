@@ -4,11 +4,11 @@ metadata:
   name: app
   namespace: argocd
 spec:
-  project: shabbier
+  project: default
   source:
     repoURL: https://github.com/shabbier0473/argocd.git
     targetRevision: HEAD
     path: helloworld
   destination:
     server: https://kubernetes.default.svc
-    namespace: helloworld
+    namespace: default
