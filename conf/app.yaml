@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app
+  namespace: argocd
+spec:
+  project: shabbier
+  source:
+    repoURL: https://github.com/shabbier0473/argocd.git
+    targetRevision: HEAD
+    path: helloworld
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: helloworld
